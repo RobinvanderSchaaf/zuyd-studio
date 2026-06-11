@@ -63,17 +63,11 @@ export default function Navbar() {
 
                     {/* Mobile Hamburger */}
                     <button
-                        role="button"
+                        type="button"
                         onClick={() => setMenuOpen(!menuOpen)}
-                        tabIndex={0}
-                        onTouchStart={() => setMenuOpen(!menuOpen)}
                         className="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10"
                         aria-label="Toggle menu"
-                    >
-                        <span className="block w-6 h-px bg-ink" />
-                        <span className="block w-4 h-px bg-ink" />
-                        <span className="block w-5 h-px bg-ink" />
-                        {/*
+                    >                   
                         <span
                             className={`block h-px bg-ink transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px] w-6" : "w-6"
                                 }`}
@@ -88,7 +82,6 @@ export default function Navbar() {
                             className={`block h-px bg-ink transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px] w-6" : "w-5"
                                 }`}
                         />
-                        */}
                     </button>
                 </nav>
             </Container>
