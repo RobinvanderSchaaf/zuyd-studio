@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 
 
-const dmSerif = DM_Serif_Display({
-  variable: "--font-dm-serif",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-serif",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -35,9 +36,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return(
-    <html lang="en">
-      <body className={'${dmSerif.variable} ${dmSans.variable}'}>
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${cormorant.variable} ${dmSans.variable}`}>
         <SpeedInsights />
         <Navbar />
         {children}

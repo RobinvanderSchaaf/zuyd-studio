@@ -34,10 +34,10 @@ export default function Navbar() {
                 <nav className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex flex-col leading-none group">
-                        <span className="text-sm font-sans font-medium  tracking-widest text-ink uppercase">
+                        <span className="text-xl font-sans font-medium  tracking-widest text-ink uppercase">
                             Zuyd
                         </span>
-                        <span className="text-xs font-sans font-light tracking-widest text-ink-muted uppercase">
+                        <span className="text-md font-sans font-light tracking-widest text-ink-muted uppercase">
                             Studio
                         </span>
                     </Link>
@@ -89,8 +89,8 @@ export default function Navbar() {
             {/* Mobile menu */}
 
             <div
-                className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                className={`md:hidden bg-cream/90 backdrop-blur-md z-50 transition-all duration-300 ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                }`}
             >
                 <Container>
                     <ul className="flex flex-col py-6 gap-6 border-t border-cream-border">
