@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
@@ -37,6 +38,7 @@ export default function RootLayout({
   return(
     <html lang="en">
       <body className={'${dmSerif.variable} ${dmSans.variable}'}>
+        <SpeedInsights />
         <Navbar />
         {children}
       </body>
