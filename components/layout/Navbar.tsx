@@ -43,12 +43,12 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop nav Links */}
-                    <ul className="hidden md:flex items-center gap-8">
+                    <ul className="hidden md:flex items-center gap-12">
                         {navLinks.map((link) => (
                             <li key={link.label}>
                                 <Link
                                     href={link.href}
-                                    className="text-sm font-sans text-ink-muted hover:text-ink transition-colors duration-200"
+                                    className="text-md font-sans text-ink-muted hover:text-ink transition-colors duration-200"
                                 >
                                     {link.label}
                                 </Link>
