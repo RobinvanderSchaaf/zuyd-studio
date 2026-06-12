@@ -6,10 +6,7 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import LogoCarousel from "../ui/LogoCarousel";
 import { FaReact } from "react-icons/fa";
-import {
-    CodeBracketSquareIcon,
-    DevicePhoneMobileIcon,
-} from "@heroicons/react/24/outline";
+import { CodeBracketSquareIcon, DevicePhoneMobileIcon, CommandLineIcon, CodeBracketIcon, } from "@heroicons/react/24/outline";
 
 const allLogos = [
     { name: "Van Dijk Bouw", src: "/images/logos/van-dijk.png" },
@@ -20,6 +17,42 @@ const allLogos = [
 export default function Hero() {
     const reduced = useReducedMotion();
 
+
+    {/* Mobile Pills */ }
+    const FeaturePills = (
+        <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+                duration: 0.6,
+                delay: 0.9,
+            }}
+            className="mt-8 flex flex-col gap-3"
+        >
+            <div className="flex items-center gap-3 rounded-2xl border border-black/5 bg-white/40 backdrop-blur-md px-4 py-3">
+                <CodeBracketIcon className="text-forest h-5 w-5" />
+                <span className="text-sm font-medium text-ink">
+                    100% Custom Built
+                </span>
+            </div>
+
+            <div className="flex items-center gap-3 rounded-2xl border border-black/5 bg-white/40 backdrop-blur-md px-4 py-3">
+                <FaReact size={18} className="text-forest" />
+                <span className="text-sm font-medium text-ink">
+                    Next.js & React
+                </span>
+            </div>
+
+            <div className="flex items-center gap-3 rounded-2xl border border-black/5 bg-white/40 backdrop-blur-md px-4 py-3">
+                <DevicePhoneMobileIcon className="text-forest h-5 w-5" />
+                <span className="text-sm font-medium text-ink">
+                    Mobile First
+                </span>
+            </div>
+        </motion.div>
+    );
+
+    {/* Hero Text */ }
     const textContent = (
         <motion.div
             initial={reduced ? false : { opacity: 0, x: -24 }}
@@ -43,9 +76,14 @@ export default function Hero() {
                 <Button label="See our work" href="#work" />
                 <Button label="Learn more" href="#about" variant="ghost" arrow="down" />
             </div>
+            <div className="lg:hidden">
+                {FeaturePills}
+            </div>
+
         </motion.div>
     );
 
+    {/*Desktop Panel*/ }
     const FeatureCard = (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,6 +141,7 @@ export default function Hero() {
         </motion.div>
     );
 
+    {/* Full hero Content Layout. */ }
     return (
         <section className="relative min-h-screen" style={{ overflow: "clip" }}>
 
