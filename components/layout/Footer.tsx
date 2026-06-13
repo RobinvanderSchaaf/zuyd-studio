@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Container from "../ui/Container";
-import { link } from "fs";
 
 const navLinks = [
     { label: "Work", href: "#work" },
@@ -43,7 +42,7 @@ export default function Footer() {
 
                     {/* CTA */}
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="text-sm font-sans text-ink-muted hover:text-ink transition-colors duration-200"
                     >
                         info@zuydstudio.nl

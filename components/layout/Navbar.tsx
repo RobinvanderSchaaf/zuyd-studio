@@ -58,7 +58,7 @@ export default function Navbar() {
 
                     {/* Desktop CTA */}
                     <div className="hidden md:block">
-                        <Button label="Let's talk" href="#contact" />
+                        <Button label="Let's talk" href="/contact" />
                     </div>
 
                     {/* Mobile Hamburger */}
