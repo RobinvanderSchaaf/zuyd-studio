@@ -25,7 +25,7 @@ const positiveItems = [
 
 export default function BuiltDifferently() {
     return (
-        <section className="bg-cream py-24 md:py-32">
+        <section className="bg-cream pt-16 pb-16 md:pt-20 md:pb-20">
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 

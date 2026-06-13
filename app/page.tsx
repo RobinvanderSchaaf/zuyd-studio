@@ -1,5 +1,6 @@
 import BuiltDifferently from "@/components/sections/BuiltDifferently";
 import Hero from "@/components/sections/Hero";
+import RecentProjects from "@/components/sections/RecentProjects";
 import TrustBar from "@/components/sections/TrustBar";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <BuiltDifferently />
+      <RecentProjects />
     </main>
   );
 }
